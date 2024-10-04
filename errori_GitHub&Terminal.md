@@ -140,4 +140,12 @@ După ce ai schimbat credentialele și configurarea, încearcă din nou:
 
 git push -u origin main
 
+### refusing to merge unrelated histories
+Eroarea "fatal: refusing to merge unrelated histories" apare atunci când încerci să îmbini două ramuri Git care 
+nu au un istoric comun. Aceasta se poate întâmpla, de exemplu, atunci când ai creat un repository nou local, 
+iar apoi încerci să-l aliniezi cu unul existent pe GitHub, care are deja un istoric.
 
+git pull origin main --allow-unrelated-histories
+git add nume_fisier
+git commit -m "Rezolvat conflictele după pull"
+git push origin main
